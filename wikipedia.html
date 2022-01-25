@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    #Tokio {
+        background-color: lightskyblue;
+        border: 2px solid black;
+        margin-bottom: 10px;
+        padding:0.7rem;
+    }
+
+    #NewYork {
+        background-color: lightskyblue;
+        border: 2px solid black;
+        margin-bottom: 10px;
+        padding: 0.7rem;
+    }
+
+    #Chicago {
+        background-color: mediumaquamarine;
+        border: 2px solid black;
+        margin-bottom: 10px;
+        padding: 0.7rem;
+    }
+
+    p {
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    .divimg {
+        border: 1px solid black;
+        width: 150px;
+        height: 100px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes.html</title>
+    <link rel="icon" type="image/x-icon" href="https://icons.iconarchive.com/icons/double-j-design/ravenna-3d/16/Globe-icon.png">
+</head>
+
+<body>
+    <div>
+        <a href="https://hu.wikipedia.org/wiki/A_Föld_legnépesebb_várostömörülései"
+            target="_blank">https://hu.wikipedia.org/wiki/A_Föld_legnépesebb_várostömörülései</a>
+        <h1>A Föld legnépesebb várostömörülései</h1>
+        <button onclick="showallcity()">Jeleníts meg minden city class azonosítójú elemet.</button>
+        <button onclick="hide10million()">Tüntessd el a 10milliós besorolású városokat: Tokio, New York</button>
+        <button onclick="hide3million()">Tüntessd el a 3milliós besorolású városokat: Chicago</button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Metropolregionen.svg/900px-Metropolregionen.svg.png">
+        <div class="city 10million" id="Tokio">
+            <div>
+                <h2>Tokió, Japán</h2>
+                <p>Tokió Japán fővárosa, közigazgatási központja, a japán kormány és a császár székhelye. Egyike Japán
+                    47<br>prefektúrájának, nem egyetlen városként kormányozzák. Hozzávetőlegesen 14 millió ember – az
+                    ország lakosságának<br>10%-a – él Tokióban, míg a Nagy Tokió Agglomerációban 33–36 millióan laknak,
+                    és ezzel ez a világ legnépesebb urbanizált területe.</p>
+                <img class="divimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg/230px-Skyscrapers_of_Shinjuku_2009_January.jpg">
+            </div>
+        </div>
+        <div class="city 10million" id="NewYork">
+            <h2>New York az Amerikai Egyesült Államok</h2>
+            <p>New York az Amerikai Egyesült Államok New York államában fekvő város. Az ország legnépesebb, Amerika
+                szuperkontinens harmadik legnépesebb települése, központja a New York-i agglomerációnak, amely a
+                szuperkontinens legnagyobb várostömörülése, a világon pedig a nyolcadik. A Föld egyik vezető
+                világvárosa, az Egyesült Államok első számú üzleti, kereskedelmi, egészségügyi, oktatási központja,
+                egyik első számú kutatási-fejlesztési, technológiai, média- és szórakoztatóipari csomópontja,
+                turizmusának elsődleges célpontja. Itt található az ENSZ és több, világszinten is jelentős
+                multinacionális vállalat székhelye, valamint a világ egyik legnagyobb tőzsdéje, ezért a Föld
+                legjelentősebb gazdasági-politikai centrumai közé tartozik.</p>
+            <img class="divimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Manhattan3_amk.jpg/230px-Manhattan3_amk.jpg">
+        </div>
+        <div class="city 3million" id="Chicago">
+            <h2>Chicago, Egyesült Államok</h2>
+            <p>Az Amerikai Egyesült Államok, gyakran Egyesült Államok, a köznyelvben egyszerűen Amerika független
+                szüvetségi köztársaság, amely ötven tagállamot és egy szövetségi kerületet foglal magában. Az ország
+                Észak-Amerikai középső részén terül el, ahol negyvennyolc állama és a főváros kerülete fekszik a</p>
+            <img class="divimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/2010-02-19_3000x2000_chicago_skyline.jpg/230px-2010-02-19_3000x2000_chicago_skyline.jpg">
+        </div>
+    </div>
+    <script>
+        function showallcity() {
+            var cities = document.getElementsByClassName("city");
+            for(var i = 0; i < cities.length; i++) {
+                cities[i].style.display = "block";
+            }
+        }
+
+        function hide10million() {
+            var cities = document.getElementsByClassName("10million");
+            for(var i = 0; i < cities.length; i++) {
+                cities[i].style.display = "none";
+            }
+        }      
+
+        function hide3million() {
+            var cities = document.getElementsByClassName("3million");
+            for(var i = 0; i < cities.length; i++) {
+                cities[i].style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
