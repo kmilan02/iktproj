@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fruitArray = ["alma", "ananász", "sárkánygyümölcs", "barack", "körte", "szilva", "banán", "papaya", "maracuja", "voavanga"];
+
+        //Növekvő sorrend
+        console.log("Növekvő sorrend.");
+        fruitArray.sort((a, b) => a.length - b.length); 
+        console.log(fruitArray);
+
+        //Csökkenő sorrend
+        console.log("Csökkenő sorrend.");
+        fruitArray.sort((a, b) => b.length - a.length);
+        console.log(fruitArray);
+
+        //A betűk
+        console.log("A betűk 1.");
+        const regex = /[a+]/g;
+        fruitArray.sort((a, b) => (b.match(regex) || []).length - (a.match(regex) || []).length)
+        console.log(fruitArray);
+
+        //A betűk növekvő
+        console.log("A betűk növekvő.");
+        fruitArray.sort((a, b) => (b.match(regex) || []).length - (a.match(regex) || []).length || a.length - b.length)
+        console.log(fruitArray);
+
+        //törlés
+        console.log("Törlés.");
+        console.log(`${fruitArray.sort((a, b) => b.length - a.length).splice(0, 3)}`);
+        console.log(fruitArray)
+    </script>
+</body>
+</html>
